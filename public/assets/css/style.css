@@ -1,0 +1,157 @@
+.clear{clear:both;}
+body{color:#374767}
+body, div{font-family: 'PT Sans', sans-serif;}
+.font-default{font-family: 'PT Sans', sans-serif;}
+label{margin:0}
+ul{list-style-type:none; padding-left:0}
+a:hover{text-decoration:none; color:inherit}
+a{color:inherit}
+
+/*Css for Job posting start*/
+.navbar.header{display:flex; margin:0; background-color:#fff; padding:0; border:0; border-radius:0;}
+.navbar.header .headBody{flex-direction:row; display:flex; width:100%;}
+.navbar.header .headBody .menuToggle{display:flex; flex-direction:row;}
+.navbar.header .headBody .menuToggler{display:flex; height:50px; align-items:center; padding:0px 15px; font-size:15px; border-right:1px solid #e1e6ef}
+.navbar.header .headBody .menuToggler:hover{background-color:#f0f0f0;}
+.navbar.header .headBody .menuToggler i{color:#444}
+.navbar.header .headBody .menuToggle .logoname, .navbar.header .headBody .menuToggle .logoMini{ color:#fff; font-size:22px; height:50px; align-items:center; display:flex; justify-content:center; background-color:#3e454c}
+.navbar.header .headBody .menuToggle .logoname{width:250px; transition-duration:0.7s}
+.navbar.header .headBody .menuToggle .logo{display:flex; justify-content:center}
+.navbar.header .headBody .menuToggle .logoMini{display:none; width:50px;}
+.navbar.header .headBody .headerContent{display:flex; width:100%; justify-content:space-between; border-bottom:1px solid #e1e6ef}
+.navbar.header .headBody .notification{display:flex; flex-direction:row;}
+.navbar.header .headBody .notification .fa-bars{display:none;}
+.navbar.header .headBody .notification ul{list-style-type:none; padding-left:0; margin-bottom:0; align-items:center; display:flex; padding-right:20px; position:relative;}
+.navbar.header .headBody .notification ul li{padding:0 10px; position:relative; align-items:center;}
+.navbar.header .headBody .notification ul li span{position:absolute; padding:1px 3px; border-radius:2px; font-size:10px; top:-5px}
+.navbar.header .headBody .notification ul li .userImg{width:25px; height:25px; border-radius:50px;}
+.navbar.header .headBody .notification ul li label{color:#fff; margin:0; vertical-align:middle; margin-left:5px; font-size:14px}
+.navbar.header .headBody .notification ul li i.fa-cog{color:#374767; padding:10px; font-size:18px; background-color:#f5f5f5; border:1px solid#f2f2f2;}
+.navbar.header .headBody .notification ul .dropParent{position: relative;}
+.navbar.header .headBody .notification ul .dropdown-menu{position:absolute; right:0; left:auto; top:35px; border-radius:0 0 5px 5px; padding:0; flex-direction:column; width:160px}
+.navbar.header .headBody .notification ul .dropdown-menu p{font-size:13px; min-width:100%; margin:0; padding:5px; text-align:center}
+.navbar.header .headBody .notification ul .dropdown-menu{padding:0;}
+.navbar.header .headBody .notification ul .dropdown-menu ul.menu{max-height:200px; overflow-x:hidden; align-items:flex-start; padding:0; border-top:1px solid #e0e0e0; border-bottom:1px solid #e0e0e0; flex-direction:column}
+.navbar.header .headBody .notification ul .dropdown-menu ul.menu li{display:flex; flex-direction:row; border-bottom:1px solid #e0e0e0; padding:10px 5px;}
+.navbar.header .headBody .notification ul .dropdown-menu ul.menu li:last-child{border:0}
+.navbar.header .headBody .notification ul .dropdown-menu ul.menu li img{width:40px; height:40px; border-radius:50px}
+.navbar.header .headBody .notification ul .dropdown-menu ul.menu li label{color:#444; min-width:80%}
+.navbar.header .headBody .notification ul .dropdown-menu ul.menu li label h5{margin:0; font-size:16px; justify-content:space-between; display:flex;}
+.navbar.header .headBody .notification ul .dropdown-menu ul.menu li label small{color:#999;}
+.navbar.header .headBody .notification ul .dropdown-menu.notifications p:first-child{text-align:left;}
+.navbar.header .headBody .notification ul .dropdown-menu.notifications ul.menu li{display:flex;}
+.navbar.header .headBody .notification ul .dropdown-menu.notifications ul.menu li h5{font-size:14px; margin:0 8px;}
+.navbar.header .headBody .notification ul .dropdown-menu.userProfile{border-radius:0;}
+.navbar.header .headBody .notification ul .dropdown-menu.userProfile ul{flex-direction:column; padding-right:0}
+.navbar.header .headBody .notification ul .dropdown-menu.userProfile li{display:flex; padding:10px; width:100%; color:#777; font-size:14px; cursor:pointer;}
+.navbar.header .headBody .notification ul .dropdown-menu.userProfile li i{background-color:transparent; padding:0; margin-right:20px; border:0; color:#777; height:14px; width:14px;}
+.navbar.header .headBody .notification ul .dropdown-menu.userProfile li:hover{background-color:#d0d0d0}
+
+.mainBody{display:flex; flex-direction:row;}
+.mainBody .leftNavigation{min-width:250px; background-color:#2c3136; min-height:100vh; transition-duration:0.7s; overflow:hidden;}
+.mainBody .leftNavigation .header{background-color:#1a2226; color:#4b646f; padding:10px 20px; font-size:13px}
+.mainBody .leftNavigation .user{display:flex; flex-direction:column; align-items:center; padding:20px; background-color:#2C3136}
+.mainBody .leftNavigation .user img{width:65px; height:65px; border-radius:50%; border:2px solid rgba(255, 255, 255, 0.1); padding:5px;}
+.mainBody .leftNavigation .user .detail{display:flex; flex-direction:column; color:#fff; width:100%; align-items:center;}
+.mainBody .leftNavigation .user .detail .role{color:#37a000}
+.mainBody .leftNavigation .user .detail .role i{margin-right:5px; font-size:12px;}
+.mainBody .leftNavigation .navigationlLinks{list-style-type:none; padding-left:0px; padding-bottom:20px;}
+.mainBody .leftNavigation .navigationlLinks li{display:flex; flex-direction:column;}
+.mainBody .leftNavigation .navigationlLinks li label{color:#a6a6a6; padding:12px 5px 12px 12px; width:100%; display:flex; align-items:center;}
+.mainBody .leftNavigation .navigationlLinks li label b{font-weight:normal}
+.mainBody .leftNavigation .navigationlLinks li i.fa-angle-left, .mainBody .leftNavigation .navigationlLinks li i.fa-angle-down{display:flex; align-items:center; color:#a6a6a6;}
+.mainBody .leftNavigation .navigationlLinks li span{display:flex; justify-content:space-between; border-left:3px solid transparent;}
+.mainBody .leftNavigation .navigationlLinks li:hover{background-color:#33383e; text-decoration:none; color:#fff;}
+.mainBody .leftNavigation .navigationlLinks li:hover span label, .mainBody .leftNavigation .navigationlLinks li.active span label, .mainBody .leftNavigation .navigationlLinks li:hover span i, .mainBody .leftNavigation .navigationlLinks li.active span i{color:#fff;}
+.mainBody .leftNavigation .navigationlLinks li.active span{background-color:#33383e; color:#fff; border-left:3px solid #37a000;}
+.mainBody .leftNavigation .navigationlLinks li ul{padding-left:50px; height:0; overflow: hidden; transition-duration:0.7s; background-color:#1c1f22; z-index:99}
+.mainBody .leftNavigation .navigationlLinks li ul.active{height:70px; transition-duration:0.7s;}
+.mainBody .leftNavigation .navigationlLinks li ul li{flex-direction:row; color:#8aa4af; align-items:center}
+.mainBody .leftNavigation .navigationlLinks li ul li:hover{background-color:transparent}
+.mainBody .leftNavigation .navigationlLinks li ul li a{border-left:0!important; padding:5px 10px 5px 0; background-color:transparent!important; color:#a6a6a6!important; font-size:13px}
+.mainBody .leftNavigation .navigationlLinks li ul li a.active{color:#fff!important;}
+.mainBody .leftNavigation .navigationlLinks li div.mini-sidebar{display:none; font-size:13px; padding:5px;}
+.mainBody .leftNavigation .navigationlLinks li ul li a:hover{color:#fff!important}
+.mainBody .leftNavigation .navigationlLinks li ul li:before{margin-right:13px}
+.mainBody .leftNavigation .navigationlLinks li i:before{margin-right:10px;}
+
+.mainBody .mainContent{width:100%; background-color:#f1f3f6;}
+.mainBody .mainContent h1{margin:0}
+.mainBody .mainContent .react-grid-Container{max-width:100%; width:100%!important;}
+.mainBody .mainContent .react-grid-Container .react-grid-HeaderRow{width:100%!important}
+.mainBody .mainContent .lightBox{display:flex; flex-direction:row;}
+.mainBody .mainContent .lightBox img{width:25%; padding:0 1% 0 0; align-self:flex-start}
+
+.mainBody .mainContent .contentBody{padding:0 45px;}
+.mainBody .mainContent .contentBody .addForm{background-color:#fff; border-radius:3px; padding:4px; border:1px solid #ddd}
+.mainBody .mainContent .contentBody .addForm .card{border:0}
+.mainBody .mainContent .contentBody .card .card-title{padding:10px 15px; background-color:#F5F5F5; border-bottom:1px solid #ddd; border-radius:2px 2px 0 0}
+.mainBody .mainContent .contentBody .card .card-title button{font-size:14px}
+.mainBody .mainContent .contentBody .card .card-title button i{margin-right:10px;}
+.mainBody .mainContent .contentBody .addForm .card .card-body .form-group label{font-weight:bold}
+.mainBody .mainContent .contentBody .addForm .card .card-body .action .btn-reset{background-color:#E0E1E2; color:#444; border-radius:4px 0 0 4px;}
+.mainBody .mainContent .contentBody .addForm .card .card-body .action .btn-success{border-radius:0 4px 4px 0; }
+.mainBody .mainContent .contentBody .cOaGrx{display:none;}
+.mainBody .mainContent .contentBody .btn{color:#fff; font-size:13px; padding:3px 7px;}
+.mainBody .mainContent .contentBody a{color:#fff; cursor:pointer}
+.mainBody .mainContent .contentBody .btn:hover{cursor:pointer}
+.mainBody .mainContent .contentBody .btn-edit{background-color:#428bca; margin-right:5px;}
+.mainBody .mainContent .contentBody .btn-delete{background-color:#E5343D}
+
+.mainBody .mainContent .contentBody .profile img{margin:0 auto; display:flex;}
+.mainBody .mainContent .contentBody .profile h6{text-align:center; margin-top:10px; font-weight:bold;}
+.mainBody .mainContent .contentBody .profile ul li{margin-bottom:10px}
+.mainBody .mainContent .contentBody .profile ul li label{width:130px; text-align:right; font-weight:bold; margin-right:20px;}
+
+.mainBody .mainContent .login{min-height:100vh; display:flex; align-items:center;}
+.mainBody .mainContent .loginPanel{width:350px; margin:0 auto; background-color:#fff; border:1px solid #ccc; padding:15px}
+.mainBody .mainContent .loginPanel .loginHeader{display:flex; padding-bottom:30px; border-bottom:1px solid #ccc; align-items:center}
+.mainBody .mainContent .loginPanel .loginHeader i{font-size:50px; margin-right:20px; color:#37a000;}
+.mainBody .mainContent .loginPanel .loginHeader span h5{margin:0}
+.mainBody .mainContent .loginPanel .loginBody{margin-top:20px;}
+.mainBody .mainContent .loginPanel .loginBody label{font-weight:bold;}
+.mainBody .mainContent .loginPanel .loginBody .form-control{border-radius:0}
+.mainBody .mainContent .loginPanel .loginFooter button{background-color:#37a000; color:#fff; border-radius:2px; border:0; padding:5px 15px}
+.mainBody .mainContent .loginPanel .errorMsg{color:#f75757; text-align:center; padding:10px 0; border:1px solid #f75757; border-radius:2px; margin-top:10px;}
+
+.pageBar{background-color:#fff; display:flex; padding:15px 30px; border-bottom:1px solid #e1e6ef; margin-bottom:20px;}
+.pageBar i{color:#37a000; font-size:50px;}
+.pageBar div h5{color:#374767; margin:0; font-weight:bold}
+.pageBar div{margin-left:25px;}
+.pageBar div small{color:#7a7a7a}
+
+
+@media (min-width:768px){
+    .sidebar-mini.sidebar-collapse .headBody .menuToggle .logoMini{display:flex;}
+    .sidebar-mini.sidebar-collapse .headBody .menuToggle .logo{display:none;}
+    .sidebar-mini.sidebar-collapse .headBody .menuToggle .logoname{width:50px; transition-duration:0.7s;}
+    
+    .sidebar-mini.sidebar-collapse .leftNavigation{min-width:50px!important; width:50px; transition-duration:0.7s;}
+    .sidebar-mini.sidebar-collapse .leftNavigation .mini-sidebar{display:none; transition-duration:0.7s;}
+    .sidebar-mini.sidebar-collapse .leftNavigation .navigationlLinks li b{display:none}
+    .sidebar-mini.sidebar-collapse .leftNavigation .navigationlLinks li i.fa-angle-left{display:none;}
+    .sidebar-mini.sidebar-collapse .leftNavigation .navigationlLinks li:hover ul{left:48px; height:initial; position:absolute; padding:5px; background-color:#222d32; border-radius:0 5px 5px 0; display:block;}
+    .sidebar-mini.sidebar-collapse .leftNavigation .navigationlLinks li ul div.mini-sidebar{display:flex; justify-content:space-between; align-items:center; color:#fff;}
+    .sidebar-mini.sidebar-collapse .leftNavigation .user .detail{display:none}
+    .sidebar-mini.sidebar-collapse .leftNavigation .user img{width:30px; height:30px; padding:2px}
+}
+
+@media (max-width:767px){
+    .navbar.header .headBody{flex-direction:column;}
+    .navbar.header .headBody .menuToggle i.fa-bars{display:none;}
+    .navbar.header .headBody .menuToggle{flex-direction:column;}
+    .navbar.header .headBody .menuToggle .logoname{width:100%;}
+    .navbar.header .headBody .notification{height:50px; display:flex; justify-content:space-between}
+    .navbar.header .headBody .notification .fa-bars{display:flex; height:50px; align-items:center; padding:0px 15px; font-size:15px}
+    .mainBody .leftNavigation{min-width:0px!important; width:0px; transition-duration:0.7s;}
+    .sidebar-mini.sidebar-collapse .leftNavigation{width:230px; min-width:230px!important; transition-duration:0.7s;}
+}
+@media (max-width:991px){
+    /* .navbar.header .headBody .notification ul .dropdown-menu.userProfile{left:-141px;}
+    .navbar.header .headBody .notification ul .dropdown-menu.notifications{left:-110px;}
+    .navbar.header .headBody .notification ul .dropdown-menu.messages{left:-110px} */
+}
+
+.bILqDE:first-child, .cPZsbN:first-child{padding-left:8px!important}
+.cPZsbN{min-width:85px}
+/*Css for Job posting end*/
