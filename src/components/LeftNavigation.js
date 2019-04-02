@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import userImg from '../images/user.jpg'
 import Axios from 'axios';
-var userUrl = "http://localhost:5000/users/edit/"
+var userUrl = "https://arcane-inlet-51731.herokuapp.com/users/edit/"
 
 
 export class LeftNavigation extends Component {

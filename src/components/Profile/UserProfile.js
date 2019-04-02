@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import userImg from '../../images/user.jpg'
 import Axios from 'axios'
-var userUrl = "http://localhost:5000/users/edit/"
+var userUrl = "https://arcane-inlet-51731.herokuapp.com/users/edit/"
 
 export class UserProfile extends Component {
 
@@ -42,7 +42,7 @@ export class UserProfile extends Component {
     editUser = (e) => {
         var userId = localStorage.getItem('userId')
         e.preventDefault();
-        var editUserUrl = "http://localhost:5000/users/edit/";
+        var editUserUrl = "https://arcane-inlet-51731.herokuapp.com/users/edit/";
         Axios({
             method: 'get',
             url: editUserUrl + userId,

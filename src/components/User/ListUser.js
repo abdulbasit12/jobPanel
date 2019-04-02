@@ -35,7 +35,7 @@ export class ListUser extends Component {
         localStorage.setItem('userId' , id)
         console.log(id);
         e.preventDefault();
-        var editUserUrl = "http://localhost:5000/users/edit/";
+        var editUserUrl = "https://arcane-inlet-51731.herokuapp.com/users/edit/";
         Axios({
             method: 'get',
             url: editUserUrl + id,
