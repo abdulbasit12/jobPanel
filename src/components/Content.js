@@ -1,78 +1,139 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import DataTable from 'react-data-table-component';
-
-const Columns = [
-    {
-        name: 'Index',
-        sortable: true,
-        selector: 'id'
-    },
-    {
-        name: 'Name',
-        selector: 'name',
-        sortable: true,
-    },
-    {
-        name: 'User Name',
-        selector: 'username',
-        sortable: true,
-    },
-    {
-        name: 'Email',
-        selector: 'email',
-        sortable: true,
-    },
-    {
-        name: 'Address',
-        selector: 'address.city',
-        sortable: true,
-    },
-]
-
+import { Link } from 'react-router-dom'
+import ReactSvgPieChart from "react-svg-piechart"
+var apiUrl = 'https://arcane-inlet-51731.herokuapp.com/'
 
 export class Content extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            persons: [],
+            jobs: [],
+            users: [],
+            depts: [],
+            feeds: [],
+            pendingJobs: [],
+            completedJobs: []
         }
     }
 
     componentDidMount() {
-        axios.get('https://jsonplaceholder.typicode.com/users')
-            .then(res => {
+        axios({
+            method: 'get',
+            url: apiUrl
+        })
+            .then((res) => {
                 this.setState({
-                    persons: res.data,
-                });
+                    jobs: res.data.jobs,
+                    users: res.data.user,
+                    depts: res.data.dept,
+                    feeds: res.data.feed,
+                    pendingJobs: res.data.pending,
+                    completedJobs: res.data.completed
+                })
             })
     }
 
     render() {
-        var data = this.state.persons;
+        var jobCount = this.state.jobs.length;
+        var userCount = this.state.users.length;
+        var deptCount = this.state.depts.length;
+        var feedCount = this.state.feeds.length;
+        var pendingCount = this.state.pendingJobs.length;
+        var completedCount = this.state.completedJobs.length
+        const data = [
+            { title: pendingCount, value: pendingCount, color: "#e66269" },
+            { title: completedCount, value: completedCount, color: "#d8e662" },
+        ]
         return (
             <div className="mainContent">
-                <h1>Dashboard One content</h1>
-                <DataTable
-                    title="User Data"
-                    columns={Columns}
-                    data={this.state.persons}
-                    pagination={true}
-                    paginationPerPage={5}
-                />
-                {this.state.persons.map(person => (
+                <div className="pageBar">
+                    <i className="fas fa-globe-europe"></i>
                     <div>
-                        <ul key={person.id}>
-                            <li>{person.name}</li>
-                            <li>{person.username}</li>
-                            <li>{person.email}</li>
-                        </ul>
-                        <div>
+                        <h5>Dashboard</h5>
+                        <small>Home</small>
+                    </div>
+                </div>
+                <div className="contentBody">
+                    <div className="col-md-12 dashlets">
+                        <div className="row">
+                            <div className="col-md-3">
+                                <div className="bords bcolor1">
+                                    <div>
+                                        <span>
+                                            <h6>{jobCount}</h6>
+                                            <label>Total Jobs</label>
+                                        </span>
+                                        <i className="fas fa-briefcase color1"></i>
+                                    </div>
+                                    <Link to="/job/list">Check all Jobs >></Link>
+                                </div>
+                            </div>
+                            <div className="col-md-3">
+                                <div className="bords bcolor2">
+                                    <div>
+                                        <span>
+                                            <h6>{userCount}</h6>
+                                            <label>Users</label>
+                                        </span>
+                                        <i className="fas fa-briefcase color2"></i>
+                                    </div>
+                                    <Link to="/user/list">View Users >></Link>
+                                </div>
+                            </div>
+                            <div className="col-md-3">
+                                <div className="bords bcolor3">
+                                    <div>
+                                        <span>
+                                            <h6>{deptCount}</h6>
+                                            <label>Departments</label>
+                                        </span>
+                                        <i className="fas fa-briefcase color3"></i>
+                                    </div>
+                                    <Link to="/department/list">Visit Departments >></Link>
+                                </div>
+                            </div>
+                            <div className="col-md-3">
+                                <div className="bords bcolor4">
+                                    <div>
+                                        <span>
+                                            <h6>{feedCount}</h6>
+                                            <label>Feedbacks</label>
+                                        </span>
+                                        <i className="fas fa-briefcase color4"></i>
+                                    </div>
+                                    <Link to="/feedback">Manage Feedbacks >></Link>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                )
-                )}
+                    <div className="col-md-12 chartsSection">
+                        <div className="">
+                            <div className="col-md-6 mt-4 pieChart">
+                                <h3 className="heading">Jobs Status</h3>
+                                <div className="row">
+                                    <div className="chart col-md-8">
+                                        <ReactSvgPieChart
+                                            data={data}
+                                            expandOnHover
+                                        />
+                                    </div>
+                                    <div className="col-md-4 chartDefine">
+                                        <div>
+                                            <span className="pending"></span>
+                                            <label>Pending</label>
+                                        </div>
+                                        <div>
+                                            <span className="completed"></span>
+                                            <label>Completed</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }

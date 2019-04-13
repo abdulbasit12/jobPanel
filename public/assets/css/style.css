@@ -75,6 +75,12 @@ a{color:inherit}
 .mainBody .leftNavigation .navigationlLinks li ul li:before{margin-right:13px}
 .mainBody .leftNavigation .navigationlLinks li i:before{margin-right:10px;}
 
+.pageBar{background-color:#fff; display:flex; padding:15px 30px; border-bottom:1px solid #e1e6ef; margin-bottom:20px;}
+.pageBar i{color:#37a000; font-size:50px;}
+.pageBar div h5{color:#374767; margin:0; font-weight:bold}
+.pageBar div{margin-left:25px;}
+.pageBar div small{color:#7a7a7a}
+
 .mainBody .mainContent{width:100%; background-color:#f1f3f6;}
 .mainBody .mainContent h1{margin:0}
 .mainBody .mainContent .react-grid-Container{max-width:100%; width:100%!important;}
@@ -114,11 +120,28 @@ a{color:inherit}
 .mainBody .mainContent .loginPanel .loginFooter button{background-color:#37a000; color:#fff; border-radius:2px; border:0; padding:5px 15px}
 .mainBody .mainContent .loginPanel .errorMsg{color:#f75757; text-align:center; padding:10px 0; border:1px solid #f75757; border-radius:2px; margin-top:10px;}
 
-.pageBar{background-color:#fff; display:flex; padding:15px 30px; border-bottom:1px solid #e1e6ef; margin-bottom:20px;}
-.pageBar i{color:#37a000; font-size:50px;}
-.pageBar div h5{color:#374767; margin:0; font-weight:bold}
-.pageBar div{margin-left:25px;}
-.pageBar div small{color:#7a7a7a}
+.mainBody .mainContent .dashlets .bords{background-color:#fff; padding:20px; border-width:2px; border-style:solid; border-radius:3px}
+.mainBody .mainContent .dashlets .bords.bcolor1{border-color:#37a000;}
+.mainBody .mainContent .dashlets .bords.bcolor2{border-color:#428bca;}
+.mainBody .mainContent .dashlets .bords.bcolor3{border-color:#E5343D;}
+.mainBody .mainContent .dashlets .bords.bcolor4{border-color:#d960e9;}
+.mainBody .mainContent .dashlets .bords div{display:flex; justify-content:space-between; align-items:center}
+.mainBody .mainContent .dashlets .bords div span h6{font-size:30px; font-weight:500}
+.mainBody .mainContent .dashlets .bords div span label{font-weight:600; letter-spacing:0.2em}
+.mainBody .mainContent .dashlets .bords div i{font-size:45px}
+.mainBody .mainContent .dashlets .bords div i.color1{color:#37a000;}
+.mainBody .mainContent .dashlets .bords div i.color2{color:#428bca;}
+.mainBody .mainContent .dashlets .bords div i.color3{color:#E5343D;}
+.mainBody .mainContent .dashlets .bords div i.color4{color:#d960e9;}
+.mainBody .mainContent .dashlets .bords a{color:#0b5df1; font-size:12px; text-transform:uppercase; margin-top:10px;}
+.mainBody .mainContent .pieChart{border:2px solid #e66269; border-radius:3px}
+.mainBody .mainContent .pieChart .heading{color:#fff; background-color:#e66269; padding:10px; margin:0 -15px}
+.mainBody .mainContent .chart{padding:20px 40px}
+.mainBody .mainContent .chartDefine{display:flex; justify-content:center; flex-direction:column;}
+.mainBody .mainContent .chartDefine div{display:flex; align-items:center; font-size:12px}
+.mainBody .mainContent .chartDefine span{height:10px; width:10px; border:2px solid #a28d8d; display:flex; margin-right:20px}
+.mainBody .mainContent .chartDefine span.pending{background-color:#e66269;}
+.mainBody .mainContent .chartDefine span.completed{background-color:#d8e662;}
 
 
 @media (min-width:768px){
